@@ -1,39 +1,325 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="20dp"
     tools:context=".FragPending">
 
     <android.support.v7.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/card1"
+        android:background="@drawable/cardview_customs"
+        android:elevation="5dp">
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+
+           <RelativeLayout
+               android:layout_width="wrap_content"
+               android:layout_height="50dp"
+               android:background="#eee9e9"
+               android:id="@+id/rel1">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/texthead"
+                   android:text="Photographer-Product Launch"
+                   android:textSize="15dp"/>
+
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@+id/texthead"
+                   android:id="@+id/textdesc"
+                   android:text="Rupees 3600"
+                   android:textSize="20dp"
+                   android:textStyle="bold"/>
+
+
+               <ImageView
+                   android:layout_width="55dp"
+                   android:layout_height="40dp"
+                   android:layout_alignParentRight="true"
+                   android:paddingRight="10dp"
+                   android:src="@drawable/heart"/>
+
+
+           </RelativeLayout>
+
+           <RelativeLayout
+               android:layout_width="wrap_content"
+               android:layout_height="150dp"
+               android:background="#ffffff"
+               android:layout_below="@+id/rel1"
+               android:id="@+id/rel2">
+
+               <ImageView
+                   android:layout_width="65dp"
+                   android:layout_height="65dp"
+                   android:src="@drawable/circle"
+                   android:paddingLeft="10dp"
+                   android:paddingTop="10dp"
+                   android:id="@+id/imgcir"/>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/texthead2"
+                   android:textSize="20dp"
+                   android:text="Business Event"
+                   android:paddingLeft="10dp"
+                   android:paddingTop="10dp"
+                   android:textStyle="bold"
+                   android:layout_toRightOf="@+id/imgcir"
+                   />
+
+               <RatingBar
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/ratbar"
+                   android:layout_toRightOf="@+id/imgcir"
+                   android:layout_marginStart="20dp"
+                   android:paddingTop="10dp"
+                   android:theme="@style/RatingBar"
+                   android:layout_below="@+id/texthead2"
+                   style="@style/Widget.AppCompat.RatingBar.Small"
+                   />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="(2 reviews)"
+                   android:layout_toRightOf="@id/ratbar"
+                   android:layout_below="@id/texthead2"
+                   android:layout_marginStart="50dp"/>
+
+
+               <ImageView
+                   android:layout_width="30dp"
+                   android:layout_height="35dp"
+                   android:layout_marginStart="10dp"
+                   android:id="@+id/imgloc"
+                   android:layout_below="@+id/imgcir"
+                   android:src="@drawable/location"/>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_toRightOf="@+id/imgloc"
+                   android:layout_below="@+id/ratbar"
+                   android:paddingTop="10dp"
+                   android:paddingLeft="15dp"
+                   android:textSize="15dp"
+                   android:text="Mumbai,India"
+                   android:id="@+id/textloc"
+                   android:textStyle="bold"/>
+
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/cal"
+                   android:src="@drawable/calendar"
+                   android:layout_below="@+id/imgloc"
+                   android:layout_marginStart="10dp"/>
+
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/clock"
+                   android:src="@drawable/clock"
+                   android:layout_below="@+id/cal"
+                   android:layout_marginStart="10dp"/>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/textclock"
+                   android:layout_toRightOf="@+id/clock"
+                   android:layout_below="@+id/cal"
+                   android:text="posted 5 hrs back"/>
+
+
+               <Button
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/button"
+                   android:background="@drawable/button"
+                   android:layout_toRightOf="@+id/textclock"
+                   android:layout_below="@+id/textloc"
+                   android:layout_marginStart="105dp"
+                   android:textColor="#ffffff"
+                   android:textStyle="bold"
+                   android:text="Withdraw"
+                   android:textSize="15dp"/>
+           </RelativeLayout>
+
+       </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/card1"
+        android:layout_marginTop="25dp"
+        android:id="@+id/card2"
+        android:background="@drawable/cardview_customs"
+        android:elevation="5dp">
 
         <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#fafafa">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-            <TextView
+
+            <RelativeLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/texthead"
-                android:text="Photographer-Product Launch"
-                android:textSize="15dp"
-                android:textStyle="bold"/>
+                android:layout_height="50dp"
+                android:background="#eee9e9"
+                android:id="@+id/rel3">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textheadn"
+                    android:text="Photographer-Product Launch"
+                    android:textSize="15dp"/>
 
 
-            <TextView
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textheadn"
+                    android:id="@+id/textdescn"
+                    android:text="Rupees 3600"
+                    android:textSize="20dp"
+                    android:textStyle="bold"/>
+
+
+                <ImageView
+                    android:layout_width="55dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="10dp"
+                    android:src="@drawable/heart"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/texthead"
-                android:id="@+id/textdesc"
-                android:text="Rupees 3600"
-                android:textSize="10dp"/>
+                android:layout_height="150dp"
+                android:background="#ffffff"
+                android:layout_below="@+id/rel3"
+                android:id="@+id/rel4">
 
+                <ImageView
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/circle"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:id="@+id/imgcirn"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/texthead2n"
+                    android:textSize="20dp"
+                    android:text="Business Event"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:textStyle="bold"
+                    android:layout_toRightOf="@+id/imgcirn"
+                    />
+
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ratbarn"
+                    android:layout_toRightOf="@+id/imgcirn"
+                    android:layout_marginStart="20dp"
+                    android:paddingTop="10dp"
+                    android:theme="@style/RatingBar"
+                    android:layout_below="@+id/texthead2n"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(2 reviews)"
+                    android:layout_toRightOf="@id/ratbarn"
+                    android:layout_below="@id/texthead2n"
+                    android:layout_marginStart="50dp"/>
+
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/imglocn"
+                    android:layout_below="@+id/imgcirn"
+                    android:src="@drawable/location"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/imglocn"
+                    android:layout_below="@+id/ratbarn"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="15dp"
+                    android:textSize="15dp"
+                    android:text="Mumbai,India"
+                    android:id="@+id/textlocn"
+                    android:textStyle="bold"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/caln"
+                    android:src="@drawable/calendar"
+                    android:layout_below="@+id/imglocn"
+                    android:layout_marginStart="10dp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/clockn"
+                    android:src="@drawable/clock"
+                    android:layout_below="@+id/caln"
+                    android:layout_marginStart="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textclockn"
+                    android:layout_toRightOf="@+id/clockn"
+                    android:layout_below="@+id/caln"
+                    android:text="posted 5 hrs back"/>
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonn"
+                    android:background="@drawable/button"
+                    android:layout_toRightOf="@+id/textclockn"
+                    android:layout_below="@+id/textlocn"
+                    android:layout_marginStart="105dp"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:text="Withdraw"
+                    android:textSize="15dp"/>
+            </RelativeLayout>
 
         </RelativeLayout>
-
 
 
     </android.support.v7.widget.CardView>
@@ -42,4 +328,4 @@
 
 
 
-</FrameLayout>
+</RelativeLayout>

@@ -49,7 +49,9 @@ public class FragApp extends Fragment
     private void setupViewPager(ViewPager viewPager) {
         MainActivity.ViewPagerAdapter adapter = new MainActivity.ViewPagerAdapter(getActivity().getSupportFragmentManager());
         adapter.addFragment(new FragPending(), "Pending");
-        adapter.addFragment(new FragWithdrawn(), "withdrawn");
+        adapter.addFragment(new FragAccp(), "Accepted");
+        adapter.addFragment(new FragDecl(), "Declined");
+        adapter.addFragment(new FragWithdrawn(), "Withdrawn");
 
         viewPager.setAdapter(adapter);
     }
